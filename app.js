@@ -31,7 +31,7 @@ app.get('/', (req, res)=>{
 })
 })
 
-app.post('/upload', upload.single('stuff'), function (request, response, next) {   
+app.post('/upload', upload.single('images'), function (request, response, next) {   
         uploaded_files.push(request.file.filename);
         console.log("Uploaded: " + request.file.filename);  
         response.redirect("/")
