@@ -1,0 +1,15 @@
+html
+    head
+        title= title
+    body
+        h1= title
+        form(action="/upload", method="post", enctype="multipart/form-data")
+            div 
+                label(for="stuff")= "Choose Pic"
+                input(type="file", name="stuff", id="stuff")
+            div
+                button="send"
+        h2= "images"
+        each image in images
+            img(src="./uploads/"+image, style="height: 60px")
+
